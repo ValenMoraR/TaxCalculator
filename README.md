@@ -15,8 +15,7 @@ The objective of this project is to develop a tax calculator that calculates the
 
 The system will ask the person to enter some personal data and after that the person has to enter some information to calculate the tax: 
 - Labor incomes
-- Other Incomes, 
-- Withholding sources
+- Other Incomes
 - Social Security Payments
 - Pension Contributions
 - Mortgage Payments 
@@ -29,10 +28,8 @@ Then the system will then handle the required calculations and provide the tax v
 ## Main Folders:
 
 ### sql Folder
-This file defines and creates the sql tables, including their relationships, data and types. This project has 3 tables:
-- Income declaration 
-- Natural Person
-- Personal info
+This file defines and creates the sql tables, including their relationships, data and types. This project has 1 tables:
+- taxcalculator
 
 ### src Folder
 
