@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Registro</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        /* Contenedor principal */
+        .search-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Estilos para el formulario */
+        .search-container form div {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .search-container input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .search-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para mensajes flash */
+        .flash-messages {
+            background-color: #ffefc1;
+            color: #5f4b00;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            text-align: left;
+        }
+
+        .flash-messages ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Buscar Registro</h1>
+
+        <!-- Mensajes flash de errores o notificaciones -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Formulario de búsqueda -->
+        <form action="/buscar" method="POST">
+            <div>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required />
+            </div>
+            <input type="submit" value="Buscar Registro" />
+        </form>
+    </div>
+</body>
+</html>

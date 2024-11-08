@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Registro</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Contenedor del formulario */
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Título */
+        h1 {
+            color: #ff4c4c;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        /* Flash messages */
+        .flash-messages {
+            background-color: #ffe6e6;
+            color: #ff4c4c;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Estilos de campos de entrada */
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        /* Estilos del botón */
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ff4c4c;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e04343;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Eliminar Registro</h1>
+
+        <!-- Bloque flash para mostrar mensajes -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form action="/eliminar" method="POST">
+            <label for="id">ID del Registro a Eliminar:</label>
+            <input type="text" name="id" id="id" required />
+            <input type="submit" value="Eliminar Registro" />
+        </form>
+    </div>
+</body>
+</html>
