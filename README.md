@@ -69,6 +69,19 @@ Para correr el programa por fuera del entorno de desarrollo :
    python src\GUI\TaxCalculator_GUI.py
    ```
 
+## How to run the tests?
+
+In order to run the web application correctly, it is important that you run the tests first so that the database is executed. Do it with this command:
+To execute the test cases you must write the following commands in the python terminal:
+- This will execute the test cases for the database:
+<pre>python Test\Test_TaxCalculator_DB.py </pre>
+
+After doing this, you can proceed to the next step:
+
+## Link of the page
+You just need to copy and paste this link in your navigator
+http://127.0.0.1:5000
+
 
 This folder contains the implementation of the project's graphical interface. The main file is TaxCalculator_GUI.py, where the visual elements that allow the user to interact with the calculator in a more intuitive and user-friendly way are located.
 
