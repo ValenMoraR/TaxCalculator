@@ -24,6 +24,19 @@ The system will ask the person to enter some personal data and after that the pe
 
 Then the system will then handle the required calculations and provide the tax value.
 
+## Requisitos
+
+Asegúrate de tener instalado:
+
+- Python 3.8 o superior
+- `unittest` (incluido por defecto en Python)
+ ```markdown
+ pip install psycopg2
+  ```
+  ```markdown
+ pip install flask
+  ```
+
 
 ## Main Folders:
 
@@ -77,6 +90,33 @@ To execute the test cases you must write the following commands in the python te
 <pre>python Test\Test_TaxCalculator_DB.py </pre>
 
 After doing this, you can proceed to the next step:
+##=========================================================================================================================================================================
+### Cómo correr las pruebas unitarias del controlador:
+```markdown
+src\Console\Menu_Console_DB.py
+```
+### Cómo correr las pruebas unitarias de la logica:
+```markdown
+python Test\Test_NCI.py
+```
+
+### Cómo operar la consola de la BD:
+```markdown
+python src/Consola/Consola_Base_de_datos.py
+```
+
+### Cómo ejecutar la aplicación web:
+```markdown
+python app.py
+```
+
+
+
+
+
+
+
+
 
 ## Link of the page
 You just need to copy and paste this link in your navigator
