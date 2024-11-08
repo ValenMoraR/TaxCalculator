@@ -115,11 +115,10 @@ class NewTaxresultTest(unittest.TestCase):
                                             pension_contribution=0,mortgage_loan_payments=0,donations=0,education_expenses=0)
             
     def test_zero_labor_income(self):
-        income_taxes = IncomeTaxes(
-            id=52823974,
-            labor_income=0)
         with self.assertRaises(InsufficientLaborIncome):
+            income_taxes = IncomeTaxes(id=52823974,labor_income=0)
             TaxValidations.v_labor_income_less_than_zero(income_taxes)
+
 
     # 3. Test para caracteres no numéricos en ingresos laborales
     def test_invalid_labor_income_value(self):
