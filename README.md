@@ -93,7 +93,7 @@ After doing this, you can proceed to the next step:
 ##=========================================================================================================================================================================
 ### Cómo correr las pruebas unitarias del controlador:
 ```markdown
-src\Console\Menu_Console_DB.py
+python Test\Test_TaxCalculator_DB.py
 ```
 ### Cómo correr las pruebas unitarias de la logica:
 ```markdown
@@ -102,24 +102,22 @@ python Test\Test_NCI.py
 
 ### Cómo operar la consola de la BD:
 ```markdown
-python src/Consola/Consola_Base_de_datos.py
+python src\Console\Menu_Console_DB.py
 ```
 
 ### Cómo ejecutar la aplicación web:
 ```markdown
 python app.py
 ```
+##  Cómo ejecutar la aplicación por consola:
+```markdown
+src\Console\TaxCalculatorConsole.py
+```
 
 
 
-
-
-
-
-
-
-## Link of the page
 You just need to copy and paste this link in your navigator
+## Link of the page
 http://127.0.0.1:5000
 
 
