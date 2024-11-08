@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        
+        .flash-messages {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #320000;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .flash-messages ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .flash-messages li {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .flash-messages .close-btn {
+            float: right;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Calculadora de impuestos</h1>
+    <h2> Buscar calculos registrados. Ingrese el ID a buscar.</h2>
+    <form action="/buscar_registro_id">
+        <div>
+            ID : <input type="text" name="id" />
+        </div>
+       
+        
+        <input type="submit" value="BUSCAR  REGISTRO" />
+    </form>
+</body>
+
+</html>
